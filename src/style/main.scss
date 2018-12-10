@@ -1,28 +1,35 @@
-html {
-    font-size: 62.5%; // 1rem is 10px
-}
+@import 'variables';
+@import 'header-wrapper';
+@import 'signin';
+@import 'signup'; 
 
-*,
+html {
+    font-size: 62.5%;
+}
+ *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: 'montserrat';
 }
+ body {
+    font-family: $font-encode;
+    font-weight: 400;
+    color: $color-gray-4D;
+} 
 
-body {
-    overflow-x: hidden;
-    font-weight: normal;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.app {
-    margin-top: 2rem;
+.app-wrapper {
+   width: 100vw;
+   height: 100vh;
     display: grid;
-    justify-items: center;
+   grid-template-rows: [page-s header-s] 13.6rem [header-e bar-s] 4rem [bar-e content-s] 1fr [content-e page-e];
+   grid-template-columns: [page-s] 14rem [content-s] 1fr [content-e] 14rem [page-e]
 }
+.bar {
+   height: 4rem;
+   background-color: $color-gray-D8;
+   grid-row: bar-s/bar-e;
+   grid-column: page-s/page-e;
+} 	
