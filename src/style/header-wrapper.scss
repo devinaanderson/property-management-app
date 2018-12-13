@@ -1,5 +1,5 @@
 
-.header-wrapper {
+.header {
     display: grid;
     grid-template-columns: [s] 1fr [e];
     grid-template-rows: [title-s] 3rem [title-e sub-s] 2rem [sub-e];
@@ -16,7 +16,7 @@
         grid-column: s/e;
     }
 }
- .header-wrapper {
+ .header {
      padding-top: 4rem;
     
     &__title {
